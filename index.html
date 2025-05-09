@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Topics in Deep Learning</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #f9fafb;
+            font-family: 'Inter', sans-serif;
+            color: #1f2937;
+            margin: 0;
+            position: relative;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+            position: relative;
+            z-index: 10;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .header h1 {
+            font-family: 'Space Mono', monospace;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #111827;
+            letter-spacing: -0.025em;
+            position: relative;
+            display: inline-block;
+        }
+        .header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+            border-radius: 2px;
+        }
+        .header p {
+            font-size: 1.125rem;
+            color: #6b7280;
+            margin-top: 0.75rem;
+        }
+        .topic-section {
+            margin-bottom: 2.5rem;
+            padding: 1.5rem;
+            background: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+            position: relative;
+            overflow: hidden;
+        }
+        .topic-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 10% 10%, rgba(59, 130, 246, 0.1), transparent 70%);
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        .topic-section h2 {
+            font-family: 'Space Mono', monospace;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        .slide-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .slide-card {
+            background: #f9fafb;
+            border-radius: 0.5rem;
+            padding: 1.25rem;
+            border: 1px solid #e5e7eb;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            position: relative;
+            z-index: 1;
+        }
+        .slide-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(59, 130, 246, 0.15);
+        }
+        .slide-card h3 {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: #374151;
+            margin-bottom: 0.75rem;
+        }
+        .slide-card iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 0.375rem;
+        }
+        .background-accent {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .accent-shape {
+            position: absolute;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15), transparent 70%);
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+        .accent-shape:nth-child(1) { width: 200px; height: 200px; top: 5%; left: 10%; }
+        .accent-shape:nth-child(2) { width: 150px; height: 150px; bottom: 10%; right: 15%; }
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            .header p {
+                font-size: 1rem;
+            }
+            .topic-section h2 {
+                font-size: 1.25rem;
+            }
+            .slide-card h3 {
+                font-size: 1rem;
+            }
+            .slide-card iframe {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-accent">
+        <div class="accent-shape"></div>
+        <div class="accent-shape"></div>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1>Advanced Topics in Deep Learning</h1>
+            <p>Delve into state-of-the-art deep learning methodologies through expertly curated presentations.</p>
+        </div>
+        <div class="topics">
+            <div class="topic-section">
+                <h2>Topic 1: Convolutional Neural Networks (CNNs) - Jan 29, 2025</h2>
+                <div class="slide-list">
+                    <div class="slide-card"><h3>Gradient-Based Learning Applied to Document Recognition</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRDVulJ4AbtAwcZEUBUiyjK_EHnfObt8iGlWZkHr8f00OOTeOhQo4UBeoyBCAJz7wvVO3BK92ufxwcw/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Imagenet classification with deep convolutional neural networks</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSFVqnEnT21qAYxNZieItHGzF2--nKs1714m_sLxcBbn60VYeDw5jXPxBb0lXpqMPr6z8Ah3IYZct_u/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Very deep convolutional networks for large-scale image recognition</h3><iframe src="https://docs.google.com/presentation/d/e/your-embed-id-cnn-3/embed?start=false&loop=false&delayms=3000" allowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Deep residual learning for image recognition</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQb2hi8ih6ce1t2IOrXrKbV6ZL8WgxrO5alpusKkwbBxIfCexyuKB8AFYLNqfR_bqa0fy7NT9v2iQBl/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Densely Connected Convolutional Networks</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR-Cco4bqtCdXhxwmmTewejNOHgmJ1Gtjd2YoRwX9HjgKBI4mFt8V-MC3jpVf4LfeVRy0oqc6Dp6GZj/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Self-training with Noisy Student improves ImageNet classification</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQol6sJLnL78NqdjAzP93yrp7jx3JxE-kPVPZ6so-xw3as8kEKH9CN4r5B0RgvE8tghkJcXRUIA1sas/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>A ConvNet for the 2020s</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTzb3cB3s_pDHkUp4DwZHo96iCFJas_lBwPaT7u9TFQuTwAqh4IbvcQVu8GQNmym_eA85ZRYgxUt6BT/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>U-Net: Convolutional Networks for Biomedical Image Segmentation</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTBk-zxRDjaU26VUalsLgqXMR5IeFgQsQ1twW5sxTVkEqXlcGX_w5J2KxU6JVZUdbGsc16NWuwg0swh/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                </div>
+            </div>
+            <div class="topic-section">
+                <h2>Topic 2: Object Detection and Segmentation - Feb 5, 2025</h2>
+                <div class="slide-list">
+                    <div class="slide-card"><h3>Fast R-CNN</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQjEDWkURwHaR7eOvKGuaQQaOhLHGCN2SkJ8YmNUmNHs6R86snqwzzvjn1_M4gEb-jC7IU3j8gh6MRo/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Faster R-CNN: Towards real-time object detection with region proposal networks</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSu_R3XJuex_OiyWjaRvQHpfnK_QDLYocoJC-lO05C2NgvdVYHwYkUrd9Z1svrhEIotCe6Nyhfs_8s8/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>You only look once: Unified, real-time object detection</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTmBT-ZMmm-0M_SSOILaS2rtT5gDw6WPOZq9l0vjTxrd1FpYegOBRuCgO85fwhFTPs_Df_DyQImyPCL/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>SSD: Single Shot MultiBox Detector</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS_BGXkCrlzQQHh3SDBaIOd8d5PtSqPmIQrP-qOwkpffe09nB1Sum0_Xl002Pu0fwOX_Q_MfxxFXxWz/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Fully convolutional networks for semantic segmentation</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRFBHBh77VKsOdmjyeHtTC5PwUBN2lB0o3vT1f9y9ZKiL9nqt4hp_v3R0CzbfSazBg74Q_rqWhNO5SC/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Multi-Scale Context Aggregation by Dilated Convolutions</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRBT4ZqAiFJuQEeMtIn3byKHFUT-nxv6UZfY3LpZG-pl58eLsqw2ryX3lbnq9KZrDLiqJm0tqLCrkzV/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Mask R-CNN</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS7etzuUeayohHGu3PIgiufXjqN-J2D4QJ4JeF64-10vhXzrpYsKBi085LMizPDtNFJJvUW_Sh6Yjpy/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Segment Anything</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ1eWTCKiLgiWdYaeGC3vcpQiy5fSnc43OPfynEQP9iWxS3hqcjCDaoojWHkCDHtA0yqLg4OydQskJd/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                </div>
+            </div>
+            <div class="topic-section">
+                <h2>Topic 3: Self-Supervised Learning - Feb 12, 2025</h2>
+                <div class="slide-list">
+                    <div class="slide-card"><h3>A Simple Framework for Contrastive Learning of Visual Representations</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS-CfclPjoKgeCt3rzmLkLFE5e5fbC2p3SLlpXIZG8gY-Sjlu_w-Ub0MeKnT1FdzIcSaN75UmpsiaE2/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Adversarial Feature Learning</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRlqr3NB4xhXyXIa6UgRu6cqZDJ-pMB-Br0LfUu0vdb9wPpzqRKVs84-ds2VAEgQqy9OFl2T3mTjD7e/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Learning Image Representations by Completing Damaged Jigsaw Puzzles</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT4l2eZ4QtfsNTzrlHIJS7bjDslzU3RoSMuFIiVai2RfvDEWjtpYOIBiNeoL_A9BuzrgsF2ONj0XJ3R/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>A Critical Analysis of Self-Supervision, or What We Can Learn From a Single Image</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQZTy0_K97xg35aTyRlyladZbIEtaEvEP3SBBQ-CSyQjeISPgyl7V5G0bTReuhgpho8Sj_eB7ROys-R/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Bootstrap your own latent: A new approach to self-supervised learning</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTis1NPFtgCxbjlzuXHm8f-R92YUNb7EqyCkk25CxgL1EkovF_tPaQepvT0Q8k4rWlZzFQJiPSIiENd/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Unsupervised Learning of Video Representations using LSTMs</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSyD98Vt9XrYiKkZQRu8ei4cjcGWEjnIQ4mmQplImFugIU9UD0Wj-Hja9Fbd6FrfRqJO_1N_jZVTsqg/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Tracking Emerges by Colorizing Videos</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRxMBcTHLEeL0kDu5RV70tWBkN5GGB-mf5wJiJodHyUSWcjClE3DxIXmG_egWNpv2CBO0137s4a40Ko/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Video Representation Learning by Dense Predictive Coding</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRoP0BhllcGlixET8H0VxqEm8enJUsvrDNmNT0xnilRLWIZwiUrBjKsjFl7_6VcfsywMrjHaWqF0Hf5/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                </div>
+            </div>
+            <div class="topic-section">
+                <h2>Topic 4: RNN / Sequence-to-Sequence Model - Feb 19, 2025</h2>
+                <div class="slide-list">
+                    <div class="slide-card"><h3>Generating sequences with recurrent neural networks</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQfpx3Q6J7Tgr42bhAAP-QGfg6fHnkKVAvSS7O8V2UvF_eiPhpMrjzj9PmE8pqVCbVp5bStGYjiCaa7/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRHTH1UE9usN0CvylBAjVmh2XC20c4YAqEgl66b1l03MsD_QY-4JoCMkP0y4ii85MqdTQgtzc-7wVFr/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Distributed representations of words and phrases and their compositionality</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSQxpBoUmJvaX72LyOeiIqmHY9Af52rt-pwBSSynPl0wp5iShe0WTkf1CV6amEljv-ChS6AMBr8e4-F/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>GloVe: Global Vectors for Word Representation</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQJm5iuWTNyKHli1Gj-ZB4TRMKm83NHimmkogHsN0Z27ym9-GVKqb6gUGczKb-mwJztRUg97Bmrfng5/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Sequence to sequence learning with neural networks</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ2gGTrNjhFXG9VQ0oP0hXW-Gql4SImqMaY41fEMOcisHiNunKnbceS9KIGQnuBkVTrhOd3ThjkdAi-/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Attention is All you Need</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRWCP1PPdH-FxPPODUJ5X9lxXrXP-SuRVcgmncBDGfg806EfXgdQ4iXyrtzoJOk_9lHzLwXnF8h37oJ/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Rethinking Attention with Performers</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRXVJM13Nv51CEqV1_XSsxwYImDs5VxuXeedd3XtnShAWHd3uciXy2joAD0HVYJ7ELG5V2mD6WngCcr/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR7Tl5DQQwf0w_YXZ_YDn9Ho_LZAMkVzGXY4wTCVQ-PmPgYYmfGshn_Shr761OF_rlveF4L7xtzS-xW/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                </div>
+            </div>
+            <div class="topic-section">
+                <h2>Topic 5: Pre-trained Language Modeling - Feb 26, 2025</h2>
+                <div class="slide-list">
+                    <div class="slide-card"><h3>Deep Contexualized Word Representations</h3></div>
+                    <div class="slide-card"><h3>BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR7Tl5DQQwf0w_YXZ_YDn9Ho_LZAMkVzGXY4wTCVQ-PmPgYYmfGshn_Shr761OF_rlveF4L7xtzS-xW/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Improving language understanding by generative pre-training</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT37T9KGh8iXVsrQJMxh-yxUxtVlhwqzOC7UyJEMPq3BTliJpNw_tUaQbyMSrOpvdh_5diTZ3fGHTbG/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>CTRL: A Conditional Transformer Language Model for Controllable Generation</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ8Yw--cJH3FMZvCbiVLbmv3mJ7wV2oH5KjVt_P-DF6VhTRyZda_98XHgqKelfL3txFz3P0BOCN5atW/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Roberta: A robustly optimized bert pretraining approach</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSBh_A7PJPbOSJIfSXy6Ym0ipM0ylDM8lNHSRR3EvmeuYq7zKatvcVHL_OiMcxIsdi1FFoD4DWdzgKj/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Cross Lingual Language Model Pretraining</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQo0miFSK--V-TIzFt6HYwlXFiTncxFjeiZm9LIO_3SoI0FFY0kQeCBVm8l8SWpHTdO08le1LxmSDNa/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                </div>
+            </div>
+            <div class="topic-section">
+                <h2>Topic 6: Efficient Fine-Tuning Techniques in Large Language Models - Mar 05, 2025</h2>
+                <div class="slide-list">
+                    <div class="slide-card"><h3>Parameter-Efficient Transfer Learning for NLP</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQitXa2YUjHfhGiyDCkg-OrbPLVnXIDQpt-Z3IwqGL5OUo7U_Dxj2qhvssXce6Z82KeaQPQ4f1lN0KD/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>LoRA: Low-Rank Adaptation of Large Language Models</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSoqlhJIJEeoMFBDUkpClsSs0CZidZAd1AhtlBG853E34SmUG9j_43pagTG5j3v8h6lma4Pza_fi8lc/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>QLoRA: Quantized Low-Rank Adaptation for Efficient Fine-Tuning of LLMs</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQOtDaTrMBAj69Uw2YRFlmDmLGzUDw07C3GuczVou5uih5NOHAJwFEUWD-6J6MEzneEcFtYzfuqhptd/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    
+                </div>
+            </div>
+            <div class="topic-section">
+                <h2>Topic 7: Unlocking the Capabilities of Language Models - Mar 12, 2025</h2>
+                <div class="slide-list">
+                    <div class="slide-card"><h3>Deep reinforcement learning from human preferences</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTC7lLxlqOmZCypozGy7dEJEpP3VKV-b4hwtc86AQI6LxzWXnKPPoByEveXv1ME36b3tRW5ml5EFJrT/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Language Models are Few-Shot Learners</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQBIK9f7A9tnk9bAtvhSbEEUs_QNLzVovHswlTeao31h34GfhTQyclftz4CriXdyQtGK1K31hB8JJ6a/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Training language models to follow instructions with human feedback</h3></div>
+                    <div class="slide-card"><h3>DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRpaUqcIRhIULby9DKIIwsi1xgSBHCeznbSzaoVTPhPl4AK3gx_waUyZH6MMeux6lAtH-E2Y6pN2YvS/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>LLM Post-Training: A Deep Dive into Reasoning Large Language Models</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRIbX6hv5EH4aMvPIrVbwE473DllRTU0l5xR87l8lfcZEwY85FQgqgMSg3wdGWfMpwJ1tWUjft9rseb/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Humanity's Last Exam</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQwSt2oiUzmmN-TqwO3WlGRDNGHRIMp7lm4hlEDSkCRunhhTY--c_xgqylde1z2-HqXngZzmgyuKLxW/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>SWE-Lancer: Can Frontier LLMs Earn $1 Million from Real-World Freelance Software Engineering?</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRLLSqctqkT7N_8hCW92wsVgiz-xugD-9uIrD3WQNo7LFZFoq6R51a2BCW3RgS8wNynjkwdfFatzP1v/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                </div>
+            </div>
+            <div class="topic-section">
+                <h2>Topic 8: Vision Transformer - April 9, 2025</h2>
+                <div class="slide-list">
+                    <div class="slide-card"><h3>An image is worth 16x16 words: Transformers for image recognition at scale</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSuavK3MMnoTbdxSV_GrYcQ3_VgRm99YW1CKqc-abqWw8pWCFYLNX4zSiqh5y6Z_RKe8qqPMyEpDLIa/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Training data-efficient image transformers & distillation through attention</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSFkoSDWAINbboYDhuEd6e91q2xFjjazs9otwZffLpPi6EQDGf-UfOvHap3JLrHg1Jm-GofRqyoNpJw/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Swin transformer: Hierarchical vision transformer using shifted windows</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQF_4I0LL55qQ_OJauSZsGpy52IZunp2ZPP0OZJU_omAJ4S-pir8YBx_y7W9MdAPoLD826QeZm9sDPC/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>VisualBERT: A Simple and Performant Baseline for Vision and Language End-to-End Object Detection with Transformers</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTGuW7ZQxaQ07whmEhkECj7TWtzmO1081-pMsnnSwr5GWzaolpTFYLrIYDQhfif9_XoJRqPVxaK4F9e/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for Vision-and-Language Tasks</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS6t4r7EpuXD2J3ELLBEYLg2Jv79HKquObMXoqfKbR9SQK0UuR80WXQmz3auHQY--a-enCYwaMC2mn6/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTazuR_PwmvguEKplX1IouSMkTdMnADf8lsu_PePObhY_EG2e0atyGuocg0nORx3ac_ZnD0QGDmudFM/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>ViLT: Vision-and-Language Transformer Without Convolution or Region Supervision</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ9Ap16vuxqGbe_lPg4XYs6W0bE0aspM3gVRTJ7MHORog6gMHNpHHZyJSLkowC2bOo1EF1OhKgTWag8/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Vision Transformer Adapter for Dense Predictions</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT3zExmKDzrhJ6t8-TFicEHFSHqkd7ViZOjfCkCtKqVLD5rrMLWMym9QaML6oscq_2bQ0TUEt2l3sRF/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                </div>
+            </div>
+            <div class="topic-section">
+                <h2>Topic 9: Reinforcement Learning - April 16, 2025</h2>
+                <div class="slide-list">
+                    <div class="slide-card"><h3>Playing atari with deep reinforcement learning</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRBLX9Yw7yq-71mYIUFuG2DR1cC1mabwE494--QG_RVZO6VoxbS1VVymwOCtbMNOoAX9FmMXAG5aNPo/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Mastering the game of Go with deep neural networks and tree search</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ_1M7CSH83P5KUo08qI7CUv0EhLFZqVwEmSzeARHXJTSsbvKMOVK9BhUa9Au8NNvO72p9i5KYsMLFE/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Curiosity-driven Exploration by Self-supervised Prediction</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRGGTf4Qe9017C_GfmBvofVjdOGiGHPg1wrot14Jx7GJ0Ldp7HaIe1y8HSScnIbQ35xGobdP9DEfeWd/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQtU9FftBVj1BDUvp-hY5JFb0MgpQEd99-L-Xdb2kPW0mMEbfevmEVSLxWxMSZD99Fs8yiIenApwCQ6/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>ReAct: Synergizing Reasoning and Acting in Language Models</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRIlUvPdXxsyfJb0VqCdP3vHGC2BoLf7GOGi8NKHAVgOF4UsDon3TWrqhlqhlaEWUO-E_Zg4wTstfbe/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Improving Factuality and Reasoning in Language Models through Multiagent Debate</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSgx9uF6dPWugaE5BrixoHSKXYqvflWpGXEfQgew6sanHtjZcVbWavYGdGmOMbKkEdS3KEhN3UaU9OF/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div class="slide-card"><h3>Optimising 5G infrastructure markets: The Business of Network Slicing</h3><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQONzBSPx_qzRH4AL1flGA6Jwar8QedupIVKIiCk6dCFhoBY9c5gSk8taOMVoK5vWwlRVldg8XXZUaY/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
